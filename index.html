@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+	<title>Birthday Surprise 🎂</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="script.js"></script>
+
+</head>
+
+<body>
+	<!-- BACKGROUND BLOBS -->
+	<div class="blob blob1"></div>
+	<div class="blob blob2"></div>
+
+	<!-- INTRO -->
+	<section id="intro" class="intro">
+		<div class="intro-card">
+
+			<div class="badge">
+				✨ Birthday Experience ✨
+			</div>
+
+			<h1>
+				Created Especially For<br>
+				<span>
+					<script>document.write(config.birthdayPerson)</script>
+				</span>
+			</h1>
+
+			<p class="subtitle">
+				Crafted with ❤️ by <span>
+					<script>document.write(config.sender)</script>
+				</span>
+			</p>
+
+			<p class="description">
+				Something special awaits inside.
+			</p>
+
+			<button id="startBtn" class="start-btn">
+				Open Your Surprise →
+			</button>
+
+		</div>
+
+	</section>
+
+	<!-- MAIN STORY -->
+	<section id="story" class="story">
+
+		<div id="scene" class="scene"></div>
+
+	</section>
+
+	<!-- MUSIC -->
+	<audio id="music" src="happy-birthday.mp3"></audio>
+
+	<button id="musicBtn" class="music-btn">
+		<i class="fas fa-play"></i>
+	</button>
+
+	<!-- EFFECTS -->
+	<div class="cursor-glow"></div>
+
+	<canvas id="confetti"></canvas>
+
+
+</body>
+
+</html>

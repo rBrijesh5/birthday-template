@@ -1,0 +1,408 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+	color: #111;
+
+	background:
+		radial-gradient(circle at top left, #ffdce9, transparent 40%),
+		radial-gradient(circle at bottom right, #dce8ff, transparent 40%),
+		#fafafa;
+}
+
+/* BLOBS */
+
+.blob {
+	position: fixed;
+	border-radius: 50%;
+	filter: blur(100px);
+	opacity: .5;
+	z-index: -1;
+}
+
+.blob1 {
+	width: 450px;
+	height: 450px;
+	background: #ffb9d6;
+
+	top: -150px;
+	left: -100px;
+
+	animation: blobMove1 12s infinite alternate;
+}
+
+.blob2 {
+	width: 500px;
+	height: 500px;
+	background: #cfdcff;
+
+	bottom: -150px;
+	right: -100px;
+
+	animation: blobMove2 15s infinite alternate;
+}
+
+@keyframes blobMove1 {
+	from {
+		transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(100px, 80px);
+	}
+}
+
+@keyframes blobMove2 {
+	from {
+		transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(-100px, -80px);
+	}
+}
+
+/* INTRO */
+
+.intro {
+	position: fixed;
+	inset: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: .8s ease;
+}
+
+.intro.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.intro-card {
+
+	position: relative;
+	z-index: 10;
+
+	width: min(650px, 90%);
+	padding: 50px 40px;
+	text-align: center;
+
+	background: rgba(255, 255, 255, .55);
+
+	backdrop-filter: blur(20px);
+
+	border: 1px solid rgba(255, 255, 255, .6);
+
+	border-radius: 35px;
+
+	box-shadow:
+		0 30px 60px rgba(0, 0, 0, .08);
+
+	animation: cardFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes cardFloat {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-8px);
+	}
+}
+
+.badge {
+
+	display: inline-block;
+
+	padding: 10px 18px;
+
+	border-radius: 999px;
+
+	background: white;
+
+	font-size: .9rem;
+
+	margin-bottom: 25px;
+}
+
+.intro h1 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.intro h1 span {
+
+	background: linear-gradient(90deg,
+			#ff4f8f,
+			#7c5cff,
+			#ff4f8f);
+
+	background-size: 200% 200%;
+
+	margin-top: 20px;
+
+	font-size: clamp(5rem, 12vw, 8rem);
+
+	font-weight: 800;
+
+	animation: gradientMove 5s linear infinite;
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientMove {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.subtitle {
+
+	margin-top: 25px;
+
+	font-size: 1.1rem;
+
+	font-weight: 600;
+
+	color: #444;
+}
+
+.description {
+
+	max-width: 550px;
+
+	margin: 20px auto 0;
+
+	line-height: 1.8;
+
+	color: #666;
+}
+
+.start-btn {
+
+	margin-top: 40px;
+
+	border: none;
+
+	background: #111;
+
+	color: white;
+
+	padding: 18px 40px;
+
+	border-radius: 999px;
+
+	font-size: 1rem;
+
+	cursor: pointer;
+
+	transition: .3s;
+}
+
+.start-btn:hover {
+
+	transform: translateY(-4px);
+
+	box-shadow:
+		0 20px 40px rgba(0, 0, 0, .15);
+}
+
+/* STORY */
+
+.story {
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.scene {
+
+	text-align: center;
+
+	padding: 30px;
+}
+
+.scene h1 {
+
+	font-size: clamp(2.5rem, 7vw, 6rem);
+
+	font-weight: 700;
+
+	max-width: 1000px;
+
+	line-height: 1.2;
+
+	opacity: 0;
+
+	transform: translateY(30px);
+
+	transition: .8s;
+}
+
+.scene.show h1 {
+
+	opacity: 1;
+
+	transform: translateY(0);
+}
+
+/* MUSIC BUTTON */
+
+.music-btn {
+
+	position: fixed;
+
+	right: 25px;
+	bottom: 25px;
+
+	width: 70px;
+	height: 70px;
+
+	border: none;
+
+	border-radius: 50%;
+
+	background: #111;
+
+	color: white;
+
+	cursor: pointer;
+
+	font-size: 22px;
+
+	z-index: 999;
+
+	transition: .3s;
+
+	box-shadow:
+		0 10px 30px rgba(0, 0, 0, .2);
+}
+
+.music-btn:hover {
+
+	transform: scale(1.08);
+}
+
+.music-btn.playing::before {
+
+	content: "";
+
+	position: absolute;
+
+	inset: -8px;
+
+	border-radius: 50%;
+
+	border: 2px solid #ff4f8f;
+
+	animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	to {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+/* HEARTS */
+
+.heart {
+
+	position: fixed;
+
+	font-size: 22px;
+
+	animation: heartFloat 5s linear forwards;
+}
+
+@keyframes heartFloat {
+
+	from {
+		transform: translateY(100vh);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(-100vh);
+		opacity: 0;
+	}
+}
+
+/* BALLOONS */
+
+.balloon {
+
+	position: absolute;
+
+	width: 60px;
+	height: 80px;
+
+	border-radius: 50%;
+
+	animation: balloonMove 8s linear infinite;
+}
+
+@keyframes balloonMove {
+
+	from {
+		transform: translateY(100vh);
+	}
+
+	to {
+		transform: translateY(-120vh);
+	}
+}
+
+/* CONFETTI */
+
+canvas {
+
+	position: fixed;
+	inset: 0;
+
+	pointer-events: none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+	.intro-card {
+		padding: 40px 25px;
+	}
+
+	.intro h1 {
+		font-size: 4rem;
+	}
+
+	.scene h1 {
+		font-size: 2rem;
+	}
+
+	.music-btn {
+		width: 60px;
+		height: 60px;
+	}
+}
