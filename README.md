@@ -1,22 +1,29 @@
-# 🎂 Birthday Surprise Website
+# 🎂 Birthday Surprise Landing Page
 
-A simple interactive birthday website built with HTML, CSS and JavaScript.
+A clean, modern and customizable birthday surprise website built with HTML, CSS and JavaScript.
 
-## Features
+## ✨ Features
 
-- 🎉 Birthday message sequence
-- 🎵 Background music player
-- ❤️ Floating hearts animation
-- 🎈 Balloons effect
-- 🎊 Confetti celebration
-- 📱 Mobile responsive
-- 🎨 Clean modern design
+* 🎉 Interactive birthday story experience
+* 🎵 Background music player
+* ❤️ Floating hearts animation
+* 🎈 Balloons animation
+* 🎊 Confetti celebration
+* 📱 Fully responsive design
+* ⚙️ Easy customization
+* 🎨 Modern glassmorphism UI
 
 ---
 
-## Customization
+## 🚀 Demo
 
-Open `script.js`
+https://rbrijesh5.github.io/birthday-template/
+
+---
+
+## ⚙️ Customization
+
+Open `script.js` and update the configuration:
 
 ```javascript
 const config = {
@@ -39,27 +46,42 @@ sender: "Alex"
 
 ### Change Music
 
-Replace:
+Replace the audio file:
 
 ```html
 <audio id="music" src="happy-birthday.mp3"></audio>
 ```
 
-with your own music file.
+with your preferred music file.
 
 ---
 
-## How To Run
+## 🛠️ Built With
 
-1. Download the project
-2. Open `index.html`
-3. Customize names and music
-4. Share with your friend 🎉
+* HTML5
+* CSS3
+* JavaScript
 
 ---
 
-## Technologies Used
+## 📂 Project Structure
 
-- HTML5
-- CSS3
-- JavaScript
+```text
+birthday-surprise-template/
+│
+├── index.html
+├── style.css
+├── script.js
+├── happy-birthday.mp3
+└── README.md
+```
+
+---
+
+## 💡 How To Use
+
+1. Clone or download this repository.
+2. Update the configuration in `script.js`.
+3. Replace the music file if desired.
+4. Open `index.html` in your browser.
+5. Share the surprise with someone special. 🎉
