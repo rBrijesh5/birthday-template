@@ -15,11 +15,10 @@ A clean, modern and customizable birthday surprise website built with HTML, CSS 
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Demo
 
-[https://codewithbrijesh.com/HappyBirthday/](Click Here)
-
----
+[Click Here
+](https://rbrijesh5.github.io/birthday-template/)
 
 ---
 
