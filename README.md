@@ -1,3 +1,10 @@
+## 🚀 Demo
+
+[Click Here
+](https://rbrijesh5.github.io/birthday-template/)
+
+---
+
 # 🎂 Birthday Surprise Landing Page
 
 A clean, modern and customizable birthday surprise website built with HTML, CSS and JavaScript.
@@ -15,13 +22,6 @@ A clean, modern and customizable birthday surprise website built with HTML, CSS 
 
 ---
 
-## 🚀 Demo
-
-[Click Here
-](https://rbrijesh5.github.io/birthday-template/)
-
----
-
 ## ⚙️ Customization
 
 Open `script.js` and update the configuration:
@@ -31,18 +31,6 @@ const config = {
     birthdayPerson: "BOB",
     sender: "BRIJESH"
 };
-```
-
-### Change Birthday Person
-
-```javascript
-birthdayPerson: "John"
-```
-
-### Change Sender Name
-
-```javascript
-sender: "Alex"
 ```
 
 ### Change Music
@@ -62,20 +50,6 @@ with your preferred music file.
 * HTML5
 * CSS3
 * JavaScript
-
----
-
-## 📂 Project Structure
-
-```text
-birthday-surprise-template/
-│
-├── index.html
-├── style.css
-├── script.js
-├── happy-birthday.mp3
-└── README.md
-```
 
 ---
 
